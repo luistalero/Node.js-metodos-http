@@ -1,0 +1,20 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Pt-royecto node para metodos HTTP",
+  "homepage": "https://github.com/luistalero/Node.js-metodos-http#readme",
+  "bugs": {
+    "url": "https://github.com/luistalero/Node.js-metodos-http/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luistalero/Node.js-metodos-http.git"
+  },
+  "license": "MIT",
+  "author": "Luis Talero",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
