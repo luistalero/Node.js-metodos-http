@@ -26,7 +26,7 @@
 //     }
 //     users.push(user)
 //     res.status(201).json(user)
-// })  
+// })
 
 // app.put('/users/:id', (req, res) => {
 //     const user = users.find(u => u.id === parseInt(req.params.id))

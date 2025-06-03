@@ -1,19 +1,22 @@
-const express = require('express')
-const sequelize = require('./config/db')
-const userRoutes = require('./pru-2/routes/userRoutes')
+import express, { json } from 'express'
+import userRoutes from './routes/userRoutes.js'
+import define from './config/db.js'
 
 const app = express()
-const PORT = 3000
+const PORT = 3001
 
-app.use(express.json())
+app.use(json())
 
 app.use('/users', userRoutes)
 
-sequelize.sync({ force: true }).then(() => {
-  console.log('Database synchronized')
-  app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`)
+// Sincronizar la base de datos y arrancar el servidor
+define.sync({ force: false }) // Cambia a `force: true` solo si quieres sobrescribir tablas existentes
+  .then(() => {
+    console.log('Database synchronized')
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`)
+    })
   })
-}).catch(err => {
-  console.error('Unable to connect to the database:', err)
-})
+  .catch(err => {
+    console.error('Unable to connect to the database:', err)
+  })
