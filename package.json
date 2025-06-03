@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "author": "Luis Talero",
-  "type": "commonjs",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,5 +21,11 @@
     "express": "^5.1.0",
     "pg": "^8.16.0",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
